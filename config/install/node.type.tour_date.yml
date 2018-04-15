@@ -1,0 +1,14 @@
+# node.type.tour_date.yml
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - umg_tour_dates
+name: 'Tour Date'
+type: tour_date
+description: 'Tour Date info for UMG artist.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

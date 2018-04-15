@@ -1,0 +1,16 @@
+name: UMG Tour Dates
+description: Provides the Tour Dates and Venue content types, Display Suite configuration and View.
+package: Custom
+
+type: module
+core: 8.x
+
+dependencies:
+  - drupal:views
+  - link:link
+  - ds:ds
+  - inline_entity_form:inline_entity_form
+  - address:address
+  
+
+php: 5.6

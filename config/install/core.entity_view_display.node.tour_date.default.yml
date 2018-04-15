@@ -1,0 +1,32 @@
+#core.entity_view_display.node.tour_date.default.yml
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.tour_date.field_date
+    - field.field.node.tour_date.field_ticket_link
+    - field.field.node.tour_date.field_venue
+    - node.type.tour_date
+  module:
+    - user
+id: node.tour_date.default
+targetEntityType: node
+bundle: tour_date
+mode: default
+content:
+  field_venue:
+    weight: 101
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_date: true
+  field_ticket_link: true

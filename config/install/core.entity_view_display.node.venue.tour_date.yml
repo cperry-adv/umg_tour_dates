@@ -1,0 +1,49 @@
+#core.entity_view_display.node.venue.tour_date.yml
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.tour_date
+    - field.field.node.venue.field_venue_location
+    - node.type.venue
+  module:
+    - address
+    - ds
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_twocol
+      library: layout_discovery/twocol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      first:
+        - field_venue_location
+      second:
+        - node_title
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: span
+          class: ''
+          link: false
+id: node.venue.tour_date
+targetEntityType: node
+bundle: venue
+mode: tour_date
+content:
+  field_venue_location:
+    type: address_default
+    weight: 0
+    region: first
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  links: true

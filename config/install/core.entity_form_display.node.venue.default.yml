@@ -1,0 +1,36 @@
+#core.entity_form_display.node.venue.default.yml
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.venue.field_venue_location
+    - node.type.venue
+  module:
+    - address
+id: node.venue.default
+targetEntityType: node
+bundle: venue
+mode: default
+content:
+  field_venue_location:
+    type: address_default
+    weight: 1
+    region: content
+    settings:
+      default_country: null
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

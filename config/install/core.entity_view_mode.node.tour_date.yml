@@ -1,0 +1,11 @@
+#core.entity_view_mode.node.tour_date.yml
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.tour_date
+label: 'Tour Date'
+targetEntityType: node
+cache: true
+

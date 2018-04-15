@@ -1,0 +1,77 @@
+#core.entity_view_display.node.tour_date.tour_date.yml
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.tour_date
+    - field.field.node.tour_date.field_date
+    - field.field.node.tour_date.field_ticket_link
+    - field.field.node.tour_date.field_venue
+    - node.type.tour_date
+  module:
+    - datetime
+    - ds
+    - link
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_3col_equal_width
+      library: ds/ds_3col_equal_width
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          left: div
+          middle: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      left:
+        - field_date
+      middle:
+        - field_venue
+      right:
+        - field_ticket_link
+id: node.tour_date.tour_date
+targetEntityType: node
+bundle: tour_date
+mode: tour_date
+content:
+  field_date:
+    type: datetime_custom
+    weight: 0
+    region: left
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: m/d
+    third_party_settings: {  }
+  field_ticket_link:
+    type: link
+    weight: 2
+    region: right
+    label: hidden
+    settings:
+      trim_length: 80
+      rel: ''
+      target: ''
+      url_only: false
+      url_plain: false
+    third_party_settings: {  }
+  field_venue:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: tour_date
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: middle
+hidden:
+  links: true

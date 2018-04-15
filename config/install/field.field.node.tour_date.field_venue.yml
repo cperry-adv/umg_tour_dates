@@ -1,0 +1,28 @@
+#field.field.node.tour_date.field_venue.yml
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_venue
+    - node.type.tour_date
+    - node.type.venue
+id: node.tour_date.field_venue
+field_name: field_venue
+entity_type: node
+bundle: tour_date
+label: Venue
+description: 'Venue information for this Tour Date.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      venue: venue
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

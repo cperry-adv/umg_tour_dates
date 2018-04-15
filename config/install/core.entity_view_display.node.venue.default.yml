@@ -1,0 +1,21 @@
+#core.entity_view_display.node.venue.default.yml
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.venue.field_venue_location
+    - node.type.venue
+  module:
+    - user
+id: node.venue.default
+targetEntityType: node
+bundle: venue
+mode: default
+content:
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_venue_location: true

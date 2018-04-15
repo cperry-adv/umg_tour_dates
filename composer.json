@@ -1,0 +1,19 @@
+{
+    "name": "drupal/umg_tour_dates",
+    "description": "UMG Tour Dates provides content types for Tour Date and Venue, a View of Tour Dates sorted by date, and a Display Suite layout for Tour Date.",
+    "type": "drupal-custom-module",
+    "homepage": "https://drupal.org/project/umg-tour-dates-thisdoesnotexist",
+    "license": "GPL-2.0+",
+    "minimum-stability": "dev",
+    "require": {
+        "drupal/address": "~1.0",
+        "drupal/ds": "~3.0",
+        "drupal/inline_entity_form": "~1.0"
+    },
+    "repositories": {
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    }
+}

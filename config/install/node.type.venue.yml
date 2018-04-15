@@ -1,0 +1,17 @@
+#node.type.venue.yml
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Venue
+type: venue
+description: 'Venue name and location information for a given Tour Date.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false
